@@ -1,0 +1,134 @@
+.statsSection {
+  padding: 6rem 2rem;
+  background-color: #000;
+  color: white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.textContent h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.textContent p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #888;
+  font-weight: 400;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+  .statCard {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .statCard:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+.textCard {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888;
+}
+  .number {
+    font-size: 2rem;
+    font-weight: 500;
+    /* Updated gradient with better visibility */
+    background: linear-gradient(45deg, 
+      #5990ff 20%, 
+      #84afff 50%, 
+      #5990ff 80%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
+  }
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  margin: 1rem 0;
+}
+
+.text {
+  color: #888;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on mobile */
+    gap: 1rem; /* Reduce gap for mobile */
+  }
+
+  .statCard {
+    padding: 1.5rem 1rem; /* Smaller padding for mobile */
+  }
+
+  .number {
+    font-size: 1.5rem; /* Smaller font for mobile */
+  }
+
+  .textContent h2 {
+    font-size: 2rem;
+  }
+}
+
+
