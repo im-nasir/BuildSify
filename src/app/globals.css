@@ -4,7 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-
 body {
   background-color: black;
   color: white;
@@ -14,8 +13,57 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Remove all previous grid-related styles and replace with these simplified ones */
 
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: relative;
+}
 
+.grid-neon-glow {
+  pointer-events: none;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 255, 0.1) 0%,
+    rgba(0, 255, 255, 0.05) 40%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+
+/* Updated gradient overlay */
+.bg-gradient-to-b {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/* Intense gradient overlay to fade the grid around the button */
+.bg-gradient-to-b-intense {
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 40%);
+  mix-blend-mode: multiply;
+}
+
+/* Content area fade for better text visibility */
+.content-fade {
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
 
 /* Hide custom cursor on mobile */
 @media (max-width: 768px) {
