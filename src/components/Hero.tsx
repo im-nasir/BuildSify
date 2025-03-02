@@ -7,11 +7,11 @@ import { InteractiveGridPattern } from '@/components/magicui/interactive-grid-pa
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-screen flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
       <InteractiveGridPattern
         className={cn(
           "[mask-image:radial-gradient(900px_circle_at_center,white,transparent)]",
-          "absolute inset-0 w-screen",
+          "absolute inset-0 w-full",
           "transform-gpu" 
         )}
         width={120}
@@ -19,7 +19,7 @@ const Hero = () => {
         squares={[16, 16]} 
       />
 
-      <div className="absolute inset-0 w-screen bg-gradient-to-b from-black/50 via-transparent to-black/50 pointer-events-none" />
+      <div className="absolute inset-0 w-screen bg-gradient-to-b from-black/50 via-transparent to-black/50 pointer-events-none overflow-hidden" />
 
       {/* Content */}
       <div className="text-center pt-16 relative z-10 max-w-[1200px] mx-auto px-4">
